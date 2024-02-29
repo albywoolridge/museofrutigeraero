@@ -3,7 +3,17 @@
     --color-texto: white;
     --color-menuitems: white;
     --somba-menuitems: #363636;
+}
 
+/* FUENTES */
+@font-face {
+    font-family: Frutiger;
+    src: url(/fonts/Frutiger.ttf);
+}
+
+@font-face {
+    font-family: FrutigerBold;
+    src: url(/fonts/Frutiger_bold.ttf);
 }
 
 * {
@@ -24,12 +34,12 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
-  }
+}
 
 button:hover {
     background-color: #fe8b00; 
     color: white;
-  }
+}
 
 .buttonlogo, .audiobutton {
     border-radius: 70px;
@@ -179,7 +189,6 @@ li {
     display: inline;
 }
 
-
 a {
     color: var(--color-menuitems);
     text-decoration: none;
@@ -199,23 +208,6 @@ footer {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     text-align: center;
-}
-
-.buttonreloj{
- font-size: 150px;
- width: 700px;
- height: 800px;
-}
-
-/* FUENTES */
-@font-face {
-    font-family: Frutiger;
-    src: url(/fonts/Frutiger.ttf);
-}
-
-@font-face {
-    font-family: FrutigerBold;
-    src: url(/fonts/Frutiger_bold.ttf);
 }
 
 #icon1, #icon2, #icon3, #icon4, #icon5 {
