@@ -18,15 +18,15 @@
         <div class="menu">
             <nav>
                 <ul>
-                    <li><button><i id="icon1" class="fa-solid fa-house fa-xs" style="color: white;"></i><a
+                    <li><button class="buttonmenu"><i id="icon1" class="fa-solid fa-house fa-xs" style="color: white;"></i><a
                             href="index.html">Inicio</a></button></li>
-                    <li><button><i id="icon2" class="fa-solid fa-music fa-xs" style="color:white;"></i><a
+                    <li><button class="buttonmenu"><i id="icon2" class="fa-solid fa-music fa-xs" style="color:white;"></i><a
                             href="musica.html">Musica</a></button></li>
-                    <li><button><i id="icon3" class="fa-solid fa-video fa-xs" style="color: white;"></i><a 
+                    <li><button class="buttonmenu"><i id="icon3" class="fa-solid fa-video fa-xs" style="color: white;"></i><a 
                             href="videos.html">Videos</a></button></li>
-                    <li><button><i id="icon4" class="fa-solid fa-image fa-xs" style="color: white;"></i><a
+                    <li><button class="buttonmenu"><i id="icon4" class="fa-solid fa-image fa-xs" style="color: white;"></i><a
                             href="imagenes.html">Imagenes</a></button></li>
-                    <li><button><i id="icon5" class="fa-brands fa-discord fa-xs" style="color: white;"></i></i><a
+                    <li><button class="buttonmenu"><i id="icon5" class="fa-brands fa-discord fa-xs" style="color: white;"></i></i><a
                             href="discord.html" >Discord</a></button></li>
                 </ul>
             </nav>
@@ -42,89 +42,145 @@
     <div class="imagenpage">
 
         <div class="icontent">
-            <div id="art1">
+            <div id="art1" class="art1">
                 <a target="_blank" href="/img/img1.jpg">
                     <img src="/img/img1.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
 
-            <div id="art2">
+            <div id="art2" class="art2">
                 <a target="_blank" href="/img/img2.jpg">
                     <img src="/img/img2.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
 
-            <div id="art3">
+            <div id="art3" class="art3">
                 <a target="_blank" href="/img/img3.jpg">
                     <img src="/img/img3.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
 
-            <div id="art4">
+            <div id="art4" class="art4">
                 <a target="_blank" href="/img/img4.jpg">
                     <img src="/img/img4.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
 
-            <div id="art5">
+            <div id="art5" class="art5">
                 <a target="_blank" href="/img/img5.jpg">
                     <img src="/img/img5.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
 
-            <div id="art6">
+            <div id="art6" class="art6">
                 <a target="_blank" href="/img/img6.jpg">
                     <img src="/img/img6.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
 
-            <div id="art7">
+            <div id="art7" class="art7">
                 <a target="_blank" href="/img/img7.jpg">
                     <img src="/img/img7.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
 
-            <div id="art8">
+            <div id="art8" class="art8">
                 <a target="_blank" href="/img/img8.jpg">
                     <img src="/img/img8.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
             
-            <div id="art9">
+            <div id="art9" class="art9">
                 <a target="_blank" href="/img/img9.jpg">
                     <img src="/img/img9.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
 
-            <div id="art10">
+            <div id="art10" class="art10">
                 <a target="_blank" href="/img/img10.jpg">
                     <img src="/img/img10.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
 
-            <div id="art11">
+            <div id="art11" class="art11">
                 <a target="_blank" href="/img/img11.jpg">
                     <img src="/img/img11.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
 
-            <div id="art12">
+            <div id="art12" class="art12">
                 <a target="_blank" href="/img/img12.jpg">
                     <img src="/img/img12.jpg" alt="Frutiger Aero" width="300" height="190">
                   </a>
             </div>
-
         </div>
-
     </div>
 
     <footer>2024 Alberto Maria para Cyberclass RD</footer>
+    <!--SCRIPT BURBUJAS DEL CURSOR-->
     <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
     <script type="module">
-      import { bubbleCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
-    
-      new bubbleCursor();
+        import { bubbleCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+        new bubbleCursor();
     </script>
-</body>
 
+    <!--SCRIPT PARA HACER TILT LAS TARJETAS-->
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art1"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art2"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art3"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art4"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art5"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art6"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art7"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art8"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art9"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art10"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art11"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".art12"), {
+            max: 25,
+            speed: 400
+         });</script>
+             <script>VanillaTilt.init(document.querySelectorAll(".buttonlogo"), {
+                max: 25,
+                speed: 400
+            });</script>
+            <script>VanillaTilt.init(document.querySelectorAll(".buttonmenu"), {
+                max: 25,
+                speed: 400
+            });</script>
+</body>
 </html>

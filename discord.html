@@ -18,15 +18,15 @@
         <div class="menu">
             <nav>
                 <ul>
-                    <li><button><i id="icon1" class="fa-solid fa-house fa-xs" style="color: white;"></i><a
+                    <li><button class="buttonmenu"><i id="icon1" class="fa-solid fa-house fa-xs" style="color: white;"></i><a
                             href="index.html">Inicio</a></button></li>
-                    <li><button><i id="icon2" class="fa-solid fa-music fa-xs" style="color:white;"></i><a
+                    <li><button class="buttonmenu"><i id="icon2" class="fa-solid fa-music fa-xs" style="color:white;"></i><a
                             href="musica.html">Musica</a></button></li>
-                    <li><button><i id="icon3" class="fa-solid fa-video fa-xs" style="color: white;"></i><a 
+                    <li><button class="buttonmenu"><i id="icon3" class="fa-solid fa-video fa-xs" style="color: white;"></i><a 
                             href="videos.html">Videos</a></button></li>
-                    <li><button><i id="icon4" class="fa-solid fa-image fa-xs" style="color: white;"></i><a
+                    <li><button class="buttonmenu"><i id="icon4" class="fa-solid fa-image fa-xs" style="color: white;"></i><a
                             href="imagenes.html">Imagenes</a></button></li>
-                    <li><button><i id="icon5" class="fa-brands fa-discord fa-xs" style="color: white;"></i></i><a
+                    <li><button class="buttonmenu"><i id="icon5" class="fa-brands fa-discord fa-xs" style="color: white;"></i></i><a
                             href="discord.html" >Discord</a></button></li>
                 </ul>
             </nav>
@@ -54,12 +54,23 @@
     </div>
 
     <footer>2024 Alberto Maria para Cyberclass RD</footer>
+    <!--SCRIPT BURBUJAS DEL CURSOR-->
     <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
     <script type="module">
-      import { bubbleCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
-    
-      new bubbleCursor();
-    </script>
-</body>
+        import { bubbleCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
 
+        new bubbleCursor();
+    </script>
+
+    <!--SCRIPT PARA HACER TILT LAS TARJETAS-->
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>VanillaTilt.init(document.querySelectorAll(".buttonlogo"), {
+            max: 25,
+            speed: 400
+        });</script>
+    <script>VanillaTilt.init(document.querySelectorAll(".buttonmenu"), {
+            max: 25,
+            speed: 400
+        });</script>
+</body>
 </html>
