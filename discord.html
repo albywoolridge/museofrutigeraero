@@ -13,28 +13,29 @@
 <body>
     <header>
         <div class="logo">
-            <image src="img/favicon.png" alt="Museo Frutiger Aero Logo" width="75" height="75"></image>
+            <button class="buttonlogo"><image src="img/favicon.png" alt="Museo Frutiger Aero Logo" width="75" height="75"></image>
         </div>
         <div class="menu">
             <nav>
                 <ul>
-                    <li><i id="icon1" class="fa-solid fa-house fa-xs" style="color: #64c8dc;"></i><a
-                            href="index.html">Inicio</a></li>
-                    <li><i id="icon2" class="fa-solid fa-music fa-xs" style="color: #64c8dc;"></i><a
-                            href="musica.html">Musica</a></li>
-                    <li><i id="icon3" class="fa-solid fa-video fa-xs" style="color: #64c8dc;"></i><a
-                            href="videos.html">Videos</a></li>
-                    <li><i id="icon4" class="fa-solid fa-image fa-xs" style="color: #64c8dc;"></i><a
-                            href="imagenes.html">Imagenes</a></li>
-                    <li><i id="icon5" class="fa-brands fa-discord fa-xs" style="color: #64c8dc;"></i></i><a
-                            href="discord.html">Discord</a></li>
+                    <li><button><i id="icon1" class="fa-solid fa-house fa-xs" style="color: white;"></i><a
+                            href="index.html">Inicio</a></button></li>
+                    <li><button><i id="icon2" class="fa-solid fa-music fa-xs" style="color:white;"></i><a
+                            href="musica.html">Musica</a></button></li>
+                    <li><button><i id="icon3" class="fa-solid fa-video fa-xs" style="color: white;"></i><a 
+                            href="videos.html">Videos</a></button></li>
+                    <li><button><i id="icon4" class="fa-solid fa-image fa-xs" style="color: white;"></i><a
+                            href="imagenes.html">Imagenes</a></button></li>
+                    <li><button><i id="icon5" class="fa-brands fa-discord fa-xs" style="color: white;"></i></i><a
+                            href="discord.html" >Discord</a></button></li>
                 </ul>
             </nav>
         </div>
         <div class="audioinicio">
-            <audio controls autoplay loop>
+            <button class="audiobutton"><audio controls autoplay loop>
                 <source src="audio/flimaphextwin.mp3" type="audio/mp3">
             </audio>
+             </button>
         </div>
     </header> <!--Cabecera de la pagina web-->
 
@@ -53,6 +54,12 @@
     </div>
 
     <footer>2024 Alberto Maria para Cyberclass RD</footer>
+    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+    <script type="module">
+      import { bubbleCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+    
+      new bubbleCursor();
+    </script>
 </body>
 
 </html>

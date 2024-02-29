@@ -1,7 +1,7 @@
 :root {
     --color-titulos: white;
     --color-texto: white;
-    --color-menuitems: #64c8dc;
+    --color-menuitems: white;
     --somba-menuitems: #363636;
 
 }
@@ -12,9 +12,33 @@
     margin-top: 0;
 }
 
+button {
+    background: rgba(0, 12, 255, 0);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-color: white;
+    transition-duration: 0.4s;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+  }
+
+button:hover {
+    background-color: #fe8b00; 
+    color: white;
+  }
+
+.buttonlogo, .audiobutton {
+    border-radius: 70px;
+}
+
 html {
-    background-image: url('/img/background.jpg');
+    background-image: url('/img/aquarium4.webp');
     background-size: cover;
+    cursor: url("/img/cursor.ico"), auto;
 }
 
 /* TITULOS Y PARRAFOS*/
@@ -43,19 +67,40 @@ strong {
 }
 
 .textoinicio {
-    /*height: 300px;
-    width: 900px;*/
     border-radius: 15px;  
-    text-align: left;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(69,71,71,1) 35%, rgba(52,52,52,1) 100%);
-    box-shadow: 15px black;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-content: center;
     align-items: center;
     justify-content: center;
+
     padding: 20px;
     margin: 55px;
     margin-top: 15px;
-    box-shadow: 8px 8px 10px hsl(210, 6%, 13%); 
+    text-shadow: 3px 3px 5px black;
+  
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.buttontexto {
+    display: flex;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-areas: 
+    "fish1 text1 ";
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-content: center;
+    color: white;
+    font-size: 25px;
+    margin-left: 33%;
 }
 
 /* MULTIMEDIA */
@@ -67,12 +112,6 @@ strong {
     justify-content: space-around;
     justify-items: center;
     align-items: center;
-    /*flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-     padding: 20px; 
-
-*/
 }
 
 video, img {
@@ -81,39 +120,37 @@ video, img {
 }
 
 .imginicio, .videoinicio, .musicainicio {
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(69,71,71,1) 35%, rgba(52,52,52,1) 100%);
-    box-shadow: 15px black;
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
     padding: 2%;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 8px 8px 10px #0064b4; 
     position: static;
+    text-shadow: 3px 3px 5px black;
 }
+
 
 header {
     top: 0;
     position: sticky;
-    font-size: 35px;
-    padding-top: 5px;
-    padding-bottom: 1px;
+    padding-top: 1px;
+    padding-bottom: 0px;
     font-family: FrutigerBold;
-    border-radius: 16px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border: 1px solid rgba(53, 12, 12, 1);
-    background: rgba(255, 255, 255, 0.35);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.5px);
-    -webkit-backdrop-filter: blur(7.5px);
-    border: 1px solid rgba(255, 255, 255, 1);
+
+
+    background: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-
     z-index: 300;
 }
 
@@ -142,6 +179,7 @@ li {
     display: inline;
 }
 
+
 a {
     color: var(--color-menuitems);
     text-decoration: none;
@@ -156,9 +194,17 @@ footer {
     font-family: FrutigerBold;
     font-size: 25px;
     color: var(--color-titulos);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     text-align: center;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(69,71,71,1) 35%, rgba(52,52,52,1) 100%);
+}
+
+.buttonreloj{
+ font-size: 150px;
+ width: 700px;
+ height: 800px;
 }
 
 /* FUENTES */
@@ -223,7 +269,6 @@ footer {
     padding-top: 15px;
 }
 
-
 .mcontent h3 {
     text-shadow: 2px 2px 2px var(--somba-menuitems);
 }
@@ -237,31 +282,41 @@ footer {
     border-style: groove;
 }
 
+.mcontent img:hover {
+    box-shadow: 5px 5px 2px red;
+    border-style: double;
+}
+
+.mcontent h3:hover {
+    text-shadow: 2px 2px 2px greenyellow;
+
+}
+
 #art1 {
     grid-area: art1;
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
-justify-content: center;
-text-align: center;
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-padding-top: 20px;
-padding-bottom: 10px;;
-align-items: center;
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 10px;;
+    align-items: center;
 }
 
 #art2 {
     grid-area: art2;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -275,11 +330,11 @@ align-items: center;
 
 #art3 {
     grid-area: art3;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -293,11 +348,11 @@ align-items: center;
 
 #art4 {
     grid-area: art4;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -311,11 +366,11 @@ align-items: center;
 
 #art5 {
     grid-area: art5;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -329,11 +384,11 @@ align-items: center;
 
 #art6 {
     grid-area: art6;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -347,11 +402,11 @@ align-items: center;
 
 #art7 {
     grid-area: art7;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -365,11 +420,11 @@ align-items: center;
 
 #art8 {
     grid-area: art8;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -383,11 +438,11 @@ align-items: center;
 
 #art9 {
     grid-area: art9;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -401,11 +456,11 @@ align-items: center;
 
 #art10 {
     grid-area: art10;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -418,11 +473,11 @@ align-items: center;
 }
 #art11 {
     grid-area: art11;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -435,11 +490,11 @@ align-items: center;
 }
 #art12 {
     grid-area: art12;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -498,12 +553,12 @@ align-items: center;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-
-    background: rgba(255, 255, 255, 0.2);
+    
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -513,15 +568,16 @@ align-items: center;
     padding-top: 20px;
     padding-bottom: 10px;;
     align-items: center;
+    margin-bottom: 2%;
 }
 
 .disc2 {
     grid-area: disc2;
-    background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0px 0px 15px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     text-align: center;
@@ -531,6 +587,7 @@ align-items: center;
     padding-top: 20px;
     padding-bottom: 10px;;
     align-items: center;
+    margin-bottom: 2%;
 }
 
 .disc2 h3 {
